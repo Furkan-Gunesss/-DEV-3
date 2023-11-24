@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        #genelkutu {
+            background-color: aqua;
+        }
+
+        #baslik {
+            background-color: bisque;
+            font-size: 33px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-3 " id="genelkutu">
+        <div class="row">
+            <h1 class="text-center" id="baslik">Karışık Fotoğraf Galerisi</h1>
+        </div>
+
+        <div class="row gy-4 mt-1">
+
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#resimDetayModal">
+                    <img src="https://picsum.photos/id/3/800/600" class="card-img-top">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#resimDetayModal">
+                    <img src="https://picsum.photos/id/7/800/600" class="card-img-top">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#resimDetayModal">
+                    <img src="https://picsum.photos/id/9/800/600" class="card-img-top">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#resimDetayModal">
+                    <img src="https://picsum.photos/id/13/800/600" class="card-img-top">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#resimDetayModal">
+                    <img src="https://picsum.photos/id/33/800/600" class="card-img-top">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#resimDetayModal">
+                    <img src="https://picsum.photos/id/43/800/600" class="card-img-top">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#resimDetayModal">
+                    <img src="https://picsum.photos/id/47/800/600" class="card-img-top">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#resimDetayModal">
+                    <img src="https://picsum.photos/id/53/800/600" class="card-img-top">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#resimDetayModal">
+                    <img src="https://picsum.photos/id/66/800/600" class="card-img-top">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#resimDetayModal">
+                    <img src="https://picsum.photos/id/71/800/600" class="card-img-top">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#resimDetayModal">
+                    <img src="https://picsum.photos/id/81/800/600" class="card-img-top">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#resimDetayModal">
+                    <img src="https://picsum.photos/id/99/800/600" class="card-img-top">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="resimDetayModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="card">
+                        <img id="modalImage" src="" class="card-img-top">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+
+        let modal = document.getElementById('modalImage');
+
+        document.querySelectorAll(".card img").forEach(element => {
+            element.addEventListener('click', () => {
+                let src = element.getAttribute('src');
+                modal.setAttribute('src', src);
+
+            })
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
